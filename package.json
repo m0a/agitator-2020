@@ -1,0 +1,15 @@
+{
+  "name": "agitator-2020",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:m0a/agitator-2020.git",
+  "author": "m0a <abe00makoto@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve":"parcel       src/index.html -d public",
+    "build":"parcel build src/index.html -d public"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
