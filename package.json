@@ -6,13 +6,15 @@
   "author": "m0a <abe00makoto@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel       src/index.html -d public",
-    "build": "parcel build src/index.html -d public",
+    "dev": "parcel src/index.html -d public",
+    "clean": "rm -rf public; mkdir public ",
+    "build": "yarn clean ; parcel build src/index.html -d public",
     "deploy": "yarn build && firebase deploy"
   },
   "devDependencies": {
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "@types/react-router-dom": "^5.1.3",
     "parcel-bundler": "^1.12.4",
     "typescript": "^3.7.4"
   },
@@ -20,6 +22,7 @@
     "@material-ui/core": "^4.8.0",
     "@material-ui/icons": "^4.5.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
   }
 }
