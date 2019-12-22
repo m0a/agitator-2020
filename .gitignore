@@ -65,6 +65,5 @@ node_modules/
 .env
 
 # parcel
+public/*
 .cache
-#TODO そのうち消す
-#public
