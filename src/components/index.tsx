@@ -5,7 +5,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useParams
 } from "react-router-dom";
 
 function App() {
@@ -32,9 +33,10 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/rooms">
-            <Rooms />
+          <Route path="/rooms"> 
+            <h2>room test</h2>
           </Route>
+          <Route path="/rooms/:slug" children={<Rooms />} />            
           <Route path="/new">
             <CreateRoom />
           </Route>
@@ -104,7 +106,13 @@ const About = () => <div>
 
 </div>
 
-const Rooms = () => <h2>Rooms</h2>;
+const Rooms = () => {
+  const {slug} = useParams();
+return <div>
+  <h2>Rooms</h2>
+  <h2>{slug}</h2>
+</div>
+};
 
 
 // import React from 'react';
