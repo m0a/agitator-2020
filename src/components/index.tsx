@@ -33,10 +33,10 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
+          <Route path="/rooms/:slug" children={<Rooms />} />            
           <Route path="/rooms"> 
             <h2>room test</h2>
           </Route>
-          <Route path="/rooms/:slug" children={<Rooms />} />            
           <Route path="/new">
             <CreateRoom />
           </Route>
@@ -68,7 +68,7 @@ const About = () => <div>
   <h2>About</h2>
   <p>カードゲーム インサイダー クローンです。スマホで簡単に遊べるので是非試してみてください。</p>
   <p>ゲームは２つのステージに分かれています。</p>
-  <p>１つ目はイエス・ノーゲームです。</p>
+  {/* <p>１つ目はイエス・ノーゲームです。</p>
   <p>２つ目はアジテータ裁判です</p>
   <h3>イエス・ノーゲームステージ</h3>
 
@@ -99,11 +99,7 @@ const About = () => <div>
   <h3>結果発表</h3>
   あとは結果を楽しんでください。集計結果をいつでも確認可能にしておきます。
   何度もプレー可能です。プレーするとウソを付くのがうまい人間。嘘を見破るのが得意な人間が明確になります。
-  その結果見ながら盛り上がりましょう。
-
-
-
-
+  その結果見ながら盛り上がりましょう。 */}
 </div>
 
 const Rooms = () => {
